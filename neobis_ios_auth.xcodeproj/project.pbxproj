@@ -7,23 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CBFE8862A1F87FF003A65ED /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBFE8852A1F87FF003A65ED /* SplashScreenView.swift */; };
+		1CBFE8892A1F8819003A65ED /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1CBFE8882A1F8819003A65ED /* SnapKit */; };
+		1CBFE8952A1F8DC0003A65ED /* gothampro_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE88B2A1F8DC0003A65ED /* gothampro_blackitalic.ttf */; };
+		1CBFE8962A1F8DC0003A65ED /* gothampro_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE88C2A1F8DC0003A65ED /* gothampro_light.ttf */; };
+		1CBFE8972A1F8DC0003A65ED /* gothampro_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE88D2A1F8DC0003A65ED /* gothampro_italic.ttf */; };
+		1CBFE8982A1F8DC0003A65ED /* gothampro_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE88E2A1F8DC0003A65ED /* gothampro_medium.ttf */; };
+		1CBFE8992A1F8DC0003A65ED /* gothampro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE88F2A1F8DC0003A65ED /* gothampro.ttf */; };
+		1CBFE89A2A1F8DC0003A65ED /* gothampro_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE8902A1F8DC0003A65ED /* gothampro_bold.ttf */; };
+		1CBFE89B2A1F8DC0003A65ED /* gothampro_bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE8912A1F8DC0003A65ED /* gothampro_bolditalic.ttf */; };
+		1CBFE89C2A1F8DC0003A65ED /* gothampro_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE8922A1F8DC0003A65ED /* gothampro_lightitalic.ttf */; };
+		1CBFE89D2A1F8DC0003A65ED /* gothampro_mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE8932A1F8DC0003A65ED /* gothampro_mediumitalic.ttf */; };
+		1CBFE89E2A1F8DC0003A65ED /* gothampro_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBFE8942A1F8DC0003A65ED /* gothampro_black.ttf */; };
 		1CD97DDB2A1F82D90004518D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD97DDA2A1F82D90004518D /* AppDelegate.swift */; };
 		1CD97DDD2A1F82D90004518D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD97DDC2A1F82D90004518D /* SceneDelegate.swift */; };
-		1CD97DDF2A1F82D90004518D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD97DDE2A1F82D90004518D /* ViewController.swift */; };
-		1CD97DE22A1F82D90004518D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD97DE02A1F82D90004518D /* Main.storyboard */; };
+		1CD97DDF2A1F82D90004518D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD97DDE2A1F82D90004518D /* SplashViewController.swift */; };
 		1CD97DE42A1F82DA0004518D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD97DE32A1F82DA0004518D /* Assets.xcassets */; };
 		1CD97DE72A1F82DA0004518D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD97DE52A1F82DA0004518D /* LaunchScreen.storyboard */; };
+		1CDA8A6E2A20C9A40046856B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A6D2A20C9A40046856B /* LoginViewController.swift */; };
+		1CDA8A712A20CC4B0046856B /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A702A20CC4B0046856B /* LoginScreenView.swift */; };
+		1CDA8A732A2375810046856B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A722A2375810046856B /* LoginViewModel.swift */; };
+		1CDA8A792A24BB6C0046856B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A782A24BB6C0046856B /* RegistrationViewController.swift */; };
+		1CDA8A7B2A24BB7A0046856B /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7A2A24BB7A0046856B /* RegistrationScreenView.swift */; };
+		1CDA8A7E2A2775930046856B /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7D2A2775930046856B /* ResetViewController.swift */; };
+		1CDA8A802A27759D0046856B /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7F2A27759D0046856B /* ResetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CBFE8852A1F87FF003A65ED /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		1CBFE88B2A1F8DC0003A65ED /* gothampro_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_blackitalic.ttf; sourceTree = "<group>"; };
+		1CBFE88C2A1F8DC0003A65ED /* gothampro_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_light.ttf; sourceTree = "<group>"; };
+		1CBFE88D2A1F8DC0003A65ED /* gothampro_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_italic.ttf; sourceTree = "<group>"; };
+		1CBFE88E2A1F8DC0003A65ED /* gothampro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_medium.ttf; sourceTree = "<group>"; };
+		1CBFE88F2A1F8DC0003A65ED /* gothampro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro.ttf; sourceTree = "<group>"; };
+		1CBFE8902A1F8DC0003A65ED /* gothampro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bold.ttf; sourceTree = "<group>"; };
+		1CBFE8912A1F8DC0003A65ED /* gothampro_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bolditalic.ttf; sourceTree = "<group>"; };
+		1CBFE8922A1F8DC0003A65ED /* gothampro_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_lightitalic.ttf; sourceTree = "<group>"; };
+		1CBFE8932A1F8DC0003A65ED /* gothampro_mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_mediumitalic.ttf; sourceTree = "<group>"; };
+		1CBFE8942A1F8DC0003A65ED /* gothampro_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_black.ttf; sourceTree = "<group>"; };
 		1CD97DD72A1F82D90004518D /* neobis_ios_auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neobis_ios_auth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD97DDA2A1F82D90004518D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CD97DDC2A1F82D90004518D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1CD97DDE2A1F82D90004518D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1CD97DE12A1F82D90004518D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CD97DDE2A1F82D90004518D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1CD97DE32A1F82DA0004518D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD97DE62A1F82DA0004518D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CD97DE82A1F82DA0004518D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CDA8A6D2A20C9A40046856B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1CDA8A702A20CC4B0046856B /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		1CDA8A722A2375810046856B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1CDA8A782A24BB6C0046856B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		1CDA8A7A2A24BB7A0046856B /* RegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
+		1CDA8A7D2A2775930046856B /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		1CDA8A7F2A27759D0046856B /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +66,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBFE8892A1F8819003A65ED /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CBFE8812A1F8735003A65ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1CBFE8832A1F874C003A65ED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A722A2375810046856B /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1CBFE8842A1F8754003A65ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A7C2A2775790046856B /* ResetPasswordScreen */,
+				1CDA8A772A24BB5A0046856B /* RegistrationScreen */,
+				1CDA8A6B2A20C9150046856B /* SplashScreen */,
+				1CDA8A6C2A20C95F0046856B /* LoginScreen */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1CBFE88A2A1F8D9D003A65ED /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1CBFE8942A1F8DC0003A65ED /* gothampro_black.ttf */,
+				1CBFE88B2A1F8DC0003A65ED /* gothampro_blackitalic.ttf */,
+				1CBFE8902A1F8DC0003A65ED /* gothampro_bold.ttf */,
+				1CBFE8912A1F8DC0003A65ED /* gothampro_bolditalic.ttf */,
+				1CBFE88D2A1F8DC0003A65ED /* gothampro_italic.ttf */,
+				1CBFE88C2A1F8DC0003A65ED /* gothampro_light.ttf */,
+				1CBFE8922A1F8DC0003A65ED /* gothampro_lightitalic.ttf */,
+				1CBFE88E2A1F8DC0003A65ED /* gothampro_medium.ttf */,
+				1CBFE8932A1F8DC0003A65ED /* gothampro_mediumitalic.ttf */,
+				1CBFE88F2A1F8DC0003A65ED /* gothampro.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		1CD97DCE2A1F82D90004518D = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +135,53 @@
 		1CD97DD92A1F82D90004518D /* neobis_ios_auth */ = {
 			isa = PBXGroup;
 			children = (
+				1CBFE88A2A1F8D9D003A65ED /* Fonts */,
+				1CBFE8842A1F8754003A65ED /* Views */,
+				1CBFE8832A1F874C003A65ED /* ViewModels */,
+				1CBFE8812A1F8735003A65ED /* Models */,
 				1CD97DDA2A1F82D90004518D /* AppDelegate.swift */,
 				1CD97DDC2A1F82D90004518D /* SceneDelegate.swift */,
-				1CD97DDE2A1F82D90004518D /* ViewController.swift */,
-				1CD97DE02A1F82D90004518D /* Main.storyboard */,
 				1CD97DE32A1F82DA0004518D /* Assets.xcassets */,
 				1CD97DE52A1F82DA0004518D /* LaunchScreen.storyboard */,
 				1CD97DE82A1F82DA0004518D /* Info.plist */,
 			);
 			path = neobis_ios_auth;
+			sourceTree = "<group>";
+		};
+		1CDA8A6B2A20C9150046856B /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1CD97DDE2A1F82D90004518D /* SplashViewController.swift */,
+				1CBFE8852A1F87FF003A65ED /* SplashScreenView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		1CDA8A6C2A20C95F0046856B /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A6D2A20C9A40046856B /* LoginViewController.swift */,
+				1CDA8A702A20CC4B0046856B /* LoginScreenView.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		1CDA8A772A24BB5A0046856B /* RegistrationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A782A24BB6C0046856B /* RegistrationViewController.swift */,
+				1CDA8A7A2A24BB7A0046856B /* RegistrationScreenView.swift */,
+			);
+			path = RegistrationScreen;
+			sourceTree = "<group>";
+		};
+		1CDA8A7C2A2775790046856B /* ResetPasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A7D2A2775930046856B /* ResetViewController.swift */,
+				1CDA8A7F2A27759D0046856B /* ResetView.swift */,
+			);
+			path = ResetPasswordScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +200,9 @@
 			dependencies = (
 			);
 			name = neobis_ios_auth;
+			packageProductDependencies = (
+				1CBFE8882A1F8819003A65ED /* SnapKit */,
+			);
 			productName = neobis_ios_auth;
 			productReference = 1CD97DD72A1F82D90004518D /* neobis_ios_auth.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 1CD97DCE2A1F82D90004518D;
+			packageReferences = (
+				1CBFE8872A1F8819003A65ED /* XCRemoteSwiftPackageReference "Snapkit" */,
+			);
 			productRefGroup = 1CD97DD82A1F82D90004518D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +248,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBFE8972A1F8DC0003A65ED /* gothampro_italic.ttf in Resources */,
+				1CBFE89C2A1F8DC0003A65ED /* gothampro_lightitalic.ttf in Resources */,
 				1CD97DE72A1F82DA0004518D /* LaunchScreen.storyboard in Resources */,
+				1CBFE89D2A1F8DC0003A65ED /* gothampro_mediumitalic.ttf in Resources */,
 				1CD97DE42A1F82DA0004518D /* Assets.xcassets in Resources */,
-				1CD97DE22A1F82D90004518D /* Main.storyboard in Resources */,
+				1CBFE8982A1F8DC0003A65ED /* gothampro_medium.ttf in Resources */,
+				1CBFE8952A1F8DC0003A65ED /* gothampro_blackitalic.ttf in Resources */,
+				1CBFE8992A1F8DC0003A65ED /* gothampro.ttf in Resources */,
+				1CBFE89E2A1F8DC0003A65ED /* gothampro_black.ttf in Resources */,
+				1CBFE8962A1F8DC0003A65ED /* gothampro_light.ttf in Resources */,
+				1CBFE89A2A1F8DC0003A65ED /* gothampro_bold.ttf in Resources */,
+				1CBFE89B2A1F8DC0003A65ED /* gothampro_bolditalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +270,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CD97DDF2A1F82D90004518D /* ViewController.swift in Sources */,
+				1CD97DDF2A1F82D90004518D /* SplashViewController.swift in Sources */,
+				1CBFE8862A1F87FF003A65ED /* SplashScreenView.swift in Sources */,
+				1CDA8A7B2A24BB7A0046856B /* RegistrationScreenView.swift in Sources */,
+				1CDA8A792A24BB6C0046856B /* RegistrationViewController.swift in Sources */,
+				1CDA8A7E2A2775930046856B /* ResetViewController.swift in Sources */,
+				1CDA8A802A27759D0046856B /* ResetView.swift in Sources */,
 				1CD97DDB2A1F82D90004518D /* AppDelegate.swift in Sources */,
+				1CDA8A6E2A20C9A40046856B /* LoginViewController.swift in Sources */,
+				1CDA8A712A20CC4B0046856B /* LoginScreenView.swift in Sources */,
 				1CD97DDD2A1F82D90004518D /* SceneDelegate.swift in Sources */,
+				1CDA8A732A2375810046856B /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1CD97DE02A1F82D90004518D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1CD97DE12A1F82D90004518D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1CD97DE52A1F82DA0004518D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +424,6 @@
 				INFOPLIST_FILE = neobis_ios_auth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +451,6 @@
 				INFOPLIST_FILE = neobis_ios_auth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +488,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CBFE8872A1F8819003A65ED /* XCRemoteSwiftPackageReference "Snapkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Snapkit/Snapkit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CBFE8882A1F8819003A65ED /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CBFE8872A1F8819003A65ED /* XCRemoteSwiftPackageReference "Snapkit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CD97DCF2A1F82D90004518D /* Project object */;
 }
