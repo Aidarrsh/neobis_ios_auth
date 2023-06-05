@@ -11,11 +11,10 @@ import SnapKit
 
 class ResetView : UIView, UITextFieldDelegate {
         
-    let newPassword : UITextField = {
-        let field = UITextField()
+    let newPassword : CustomTextField = {
+        let field = CustomTextField()
         field.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        let placeholder = NSAttributedString(string: "Придумайте пароль", attributes: [NSAttributedString.Key.foregroundColor : UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1), NSAttributedString.Key.font: UIFont(name: "GothamPro-Medium", size: 16)!])
-        field.attributedPlaceholder = placeholder
+        field.placeholder = "Придумайте пароль"
         field.isSecureTextEntry = true
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
         field.leftView = leftView
@@ -35,11 +34,10 @@ class ResetView : UIView, UITextFieldDelegate {
         return field
     }()
     
-    let repeatPassword: UITextField = {
-        let field = UITextField()
+    let repeatPassword: CustomTextField = {
+        let field = CustomTextField()
         field.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        let placeholder = NSAttributedString(string: "Повторите пароль", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1), NSAttributedString.Key.font: UIFont(name: "GothamPro-Medium", size: 16)!])
-        field.attributedPlaceholder = placeholder
+        field.placeholder = "Повторите пароль"
         field.isSecureTextEntry = true
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
         field.leftView = leftView
@@ -61,16 +59,52 @@ class ResetView : UIView, UITextFieldDelegate {
     
     let enterButton : UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
         button.layer.cornerRadius = 16
         let buttonTitle = "Далее"
         button.setTitle(buttonTitle, for: .normal)
-        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
+        button.setTitleColor(UIColor(red: 156/255, green: 164/255, blue: 171/255, alpha: 1.0), for: .normal)
         button.titleLabel?.font = UIFont(name: "GothamPro-Bold", size: 16)
         
         button.contentVerticalAlignment = .center
         
         return button
+    }()
+    
+    let firstLabel : UILabel = {
+        let label = UILabel()
+        label.text = "•Заглавная буква"
+        label.font = UIFont(name: "GothamPro-Medium", size: 16)
+        label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        
+        return label
+    }()
+    
+    let secondLabel : UILabel = {
+        let label = UILabel()
+        label.text = "•Цифры"
+        label.font = UIFont(name: "GothamPro-Medium", size: 16)
+        label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        
+        return label
+    }()
+    
+    let thirdLabel : UILabel = {
+        let label = UILabel()
+        label.text = "•Специальные символы"
+        label.font = UIFont(name: "GothamPro-Medium", size: 16)
+        label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        
+        return label
+    }()
+    
+    let fourthLabel : UILabel = {
+        let label = UILabel()
+        label.text = "•Совпадение пароля"
+        label.font = UIFont(name: "GothamPro-Medium", size: 16)
+        label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        
+        return label
     }()
         
     override init(frame: CGRect) {
@@ -78,6 +112,9 @@ class ResetView : UIView, UITextFieldDelegate {
         
         newPassword.delegate = self
         repeatPassword.delegate = self
+        
+        newPassword.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
+        repeatPassword.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
     }
     
     required init?(coder: NSCoder) {
@@ -109,6 +146,10 @@ class ResetView : UIView, UITextFieldDelegate {
         addSubview(newPassword)
         addSubview(repeatPassword)
         addSubview(enterButton)
+        addSubview(firstLabel)
+        addSubview(secondLabel)
+        addSubview(thirdLabel)
+        addSubview(fourthLabel)
     }
     
     func setupConstraints() {
@@ -133,6 +174,71 @@ class ResetView : UIView, UITextFieldDelegate {
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
             make.height.equalTo(UIScreen.main.bounds.height * 65 / 812)
         }
+        
+        firstLabel.snp.makeConstraints{ make in
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 28 / 812)
+            make.leading.equalTo(repeatPassword.snp.leading)
+        }
+        
+        secondLabel.snp.makeConstraints{ make in
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 55 / 812)
+            make.leading.equalTo(repeatPassword.snp.leading)
+        }
+        
+        thirdLabel.snp.makeConstraints{ make in
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 82 / 812)
+            make.leading.equalTo(repeatPassword.snp.leading)
+        }
+        
+        fourthLabel.snp.makeConstraints{ make in
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 109 / 812)
+            make.leading.equalTo(repeatPassword.snp.leading)
+        }
     }
+    
+    @objc func textFieldEditingChanged(_ textField: UITextField) {
+        let resultString = newPassword.text ?? ""
+
+        let upperCaseLetterCharacterSet = CharacterSet.uppercaseLetters
+        let digitCharacterSet = CharacterSet.decimalDigits
+        let specialCharacterSet = CharacterSet.symbols.union(CharacterSet.punctuationCharacters)
+
+        if resultString.rangeOfCharacter(from: upperCaseLetterCharacterSet) != nil {
+            firstLabel.textColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+        } else {
+            firstLabel.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        }
+
+        if resultString.rangeOfCharacter(from: digitCharacterSet) != nil {
+            secondLabel.textColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+        } else {
+            secondLabel.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        }
+
+        if resultString.rangeOfCharacter(from: specialCharacterSet) != nil {
+            thirdLabel.textColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+        } else {
+            thirdLabel.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        }
+
+        if newPassword.text == repeatPassword.text {
+            fourthLabel.textColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+        } else {
+            fourthLabel.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+        }
+
+        updateButtonColor()
+    }
+
+    func updateButtonColor() {
+        if firstLabel.textColor == secondLabel.textColor && secondLabel.textColor == thirdLabel.textColor && thirdLabel.textColor == fourthLabel.textColor && fourthLabel.textColor ==  UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0){
+            enterButton.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+            enterButton.setTitleColor(.white, for: .normal)
+        } else {
+            enterButton.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
+            enterButton.setTitleColor(UIColor(red: 156/255, green: 164/255, blue: 171/255, alpha: 1.0), for: .normal)
+        }
+    }
+
 }
 

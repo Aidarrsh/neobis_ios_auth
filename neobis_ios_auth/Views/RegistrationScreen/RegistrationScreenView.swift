@@ -33,17 +33,15 @@ class RegistrationScreenView : UIView, UITextFieldDelegate {
         return label
     }()
     
-    let loginField : UITextField = {
-        let field = UITextField()
+    let loginField : CustomTextField = {
+        let field = CustomTextField()
         field.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        let placeholder = NSAttributedString(string: "Электронная почта", attributes: [NSAttributedString.Key.foregroundColor : UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1), NSAttributedString.Key.font: UIFont(name: "GothamPro-Medium", size: 16)!])
-        field.attributedPlaceholder = placeholder
+        field.placeholder = "Электронная почта"
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
         field.leftView = leftView
         field.leftViewMode = .always
         field.layer.cornerRadius = 8
         field.returnKeyType = .search
-
         return field
     }()
     
@@ -122,4 +120,21 @@ class RegistrationScreenView : UIView, UITextFieldDelegate {
             make.height.equalTo(UIScreen.main.bounds.height * 65 / 812)
         }
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        
+        if updatedText.contains("@") {
+            enterButton.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+            enterButton.setTitleColor(UIColor.white, for: .normal)
+        } else {
+            enterButton.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
+            enterButton.setTitleColor(UIColor(red: 156/255, green: 164/255, blue: 171/255, alpha: 1.0), for: .normal)
+        }
+        
+        return true
+    }
+
 }

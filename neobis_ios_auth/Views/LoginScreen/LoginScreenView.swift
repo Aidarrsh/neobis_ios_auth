@@ -18,11 +18,10 @@ class LoginScreenView : UIView, UITextFieldDelegate {
         return image
     }()
     
-    let loginField : UITextField = {
-        let field = UITextField()
+    let loginField : CustomTextField = {
+        let field = CustomTextField()
         field.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        let placeholder = NSAttributedString(string: "Электронная почта", attributes: [NSAttributedString.Key.foregroundColor : UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1), NSAttributedString.Key.font: UIFont(name: "GothamPro-Medium", size: 16)!])
-        field.attributedPlaceholder = placeholder
+        field.placeholder = "Электронная почта"
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
         field.leftView = leftView
         field.leftViewMode = .always
@@ -32,11 +31,10 @@ class LoginScreenView : UIView, UITextFieldDelegate {
         return field
     }()
     
-    let passwordField: UITextField = {
-        let field = UITextField()
+    let passwordField: CustomTextField = {
+        let field = CustomTextField()
         field.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        let placeholder = NSAttributedString(string: "Пароль", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1), NSAttributedString.Key.font: UIFont(name: "GothamPro-Medium", size: 16)!])
-        field.attributedPlaceholder = placeholder
+        field.placeholder = "Пароль"
         field.isSecureTextEntry = true
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
         field.leftView = leftView
@@ -150,5 +148,34 @@ class LoginScreenView : UIView, UITextFieldDelegate {
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
             make.centerX.equalToSuperview()
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        
+        if textField == loginField {
+   
+            if updatedText.contains("@") && passwordField.text!.count >= 8 {
+                enterButton.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+                enterButton.setTitleColor(UIColor.white, for: .normal)
+            } else {
+                enterButton.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
+                enterButton.setTitleColor(UIColor(red: 156/255, green: 164/255, blue: 171/255, alpha: 1.0), for: .normal)
+            }
+        }
+        
+        if textField == passwordField {
+            if updatedText.count >= 8 && loginField.text!.contains("@") {
+                enterButton.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+                enterButton.setTitleColor(UIColor.white, for: .normal)
+            } else {
+                enterButton.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
+                enterButton.setTitleColor(UIColor(red: 156/255, green: 164/255, blue: 171/255, alpha: 1.0), for: .normal)
+            }
+        }
+        
+        return true
     }
 }

@@ -31,6 +31,9 @@
 		1CDA8A7B2A24BB7A0046856B /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7A2A24BB7A0046856B /* RegistrationScreenView.swift */; };
 		1CDA8A7E2A2775930046856B /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7D2A2775930046856B /* ResetViewController.swift */; };
 		1CDA8A802A27759D0046856B /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7F2A27759D0046856B /* ResetView.swift */; };
+		1CDA8A832A2B34D00046856B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A822A2B34D00046856B /* CustomTextField.swift */; };
+		1CDA8A852A2DCC7A0046856B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A842A2DCC7A0046856B /* UserModel.swift */; };
+		1CDA8A882A2DCCAB0046856B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A872A2DCCAB0046856B /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		1CDA8A7A2A24BB7A0046856B /* RegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
 		1CDA8A7D2A2775930046856B /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		1CDA8A7F2A27759D0046856B /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
+		1CDA8A822A2B34D00046856B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1CDA8A842A2DCC7A0046856B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1CDA8A872A2DCCAB0046856B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		1CBFE8812A1F8735003A65ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1CDA8A842A2DCC7A0046856B /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,6 +98,7 @@
 		1CBFE8842A1F8754003A65ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1CDA8A812A2B34AE0046856B /* TextField */,
 				1CDA8A7C2A2775790046856B /* ResetPasswordScreen */,
 				1CDA8A772A24BB5A0046856B /* RegistrationScreen */,
 				1CDA8A6B2A20C9150046856B /* SplashScreen */,
@@ -135,6 +143,7 @@
 		1CD97DD92A1F82D90004518D /* neobis_ios_auth */ = {
 			isa = PBXGroup;
 			children = (
+				1CDA8A862A2DCC9E0046856B /* Service */,
 				1CBFE88A2A1F8D9D003A65ED /* Fonts */,
 				1CBFE8842A1F8754003A65ED /* Views */,
 				1CBFE8832A1F874C003A65ED /* ViewModels */,
@@ -182,6 +191,22 @@
 				1CDA8A7F2A27759D0046856B /* ResetView.swift */,
 			);
 			path = ResetPasswordScreen;
+			sourceTree = "<group>";
+		};
+		1CDA8A812A2B34AE0046856B /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A822A2B34D00046856B /* CustomTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		1CDA8A862A2DCC9E0046856B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A872A2DCCAB0046856B /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,14 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CDA8A882A2DCCAB0046856B /* UserService.swift in Sources */,
 				1CD97DDF2A1F82D90004518D /* SplashViewController.swift in Sources */,
 				1CBFE8862A1F87FF003A65ED /* SplashScreenView.swift in Sources */,
 				1CDA8A7B2A24BB7A0046856B /* RegistrationScreenView.swift in Sources */,
 				1CDA8A792A24BB6C0046856B /* RegistrationViewController.swift in Sources */,
 				1CDA8A7E2A2775930046856B /* ResetViewController.swift in Sources */,
+				1CDA8A852A2DCC7A0046856B /* UserModel.swift in Sources */,
 				1CDA8A802A27759D0046856B /* ResetView.swift in Sources */,
 				1CD97DDB2A1F82D90004518D /* AppDelegate.swift in Sources */,
 				1CDA8A6E2A20C9A40046856B /* LoginViewController.swift in Sources */,
+				1CDA8A832A2B34D00046856B /* CustomTextField.swift in Sources */,
 				1CDA8A712A20CC4B0046856B /* LoginScreenView.swift in Sources */,
 				1CD97DDD2A1F82D90004518D /* SceneDelegate.swift in Sources */,
 				1CDA8A732A2375810046856B /* LoginViewModel.swift in Sources */,
