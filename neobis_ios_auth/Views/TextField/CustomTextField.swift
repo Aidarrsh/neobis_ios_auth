@@ -25,6 +25,7 @@ class CustomTextField: UITextField {
     }
 
     func commonInit() {
+        self.autocapitalizationType = .none
         floatingLabel.textColor = defaultPlaceholderColor
         floatingLabel.font = UIFont(name: "GothamPro-Medium", size: 16)
         addSubview(floatingLabel)

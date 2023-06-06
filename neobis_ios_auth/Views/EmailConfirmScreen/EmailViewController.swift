@@ -9,10 +9,20 @@ import Foundation
 import UIKit
 import SnapKit
 
-class EmailViewController : UIViewController {
-
+class EmailViewController : UIViewController, ForgotPasswordViewModelDelegate {
+        
     let mainView = EmailView()
-    var userViewModel = UserViewModel()
+    var userViewModel: UserViewModelProtocol!
+    
+    init(userViewModel: UserViewModelProtocol) {
+        super.init(nibName: nil, bundle: nil)
+        self.userViewModel = userViewModel
+        self.userViewModel.forgotPasswordDelegate = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +45,7 @@ class EmailViewController : UIViewController {
         userViewModel.forgotPassword(email: email)
     }
 
+
     @objc func backPressed() {
         navigationController?.popViewController(animated: true)
     }
@@ -44,5 +55,13 @@ class EmailViewController : UIViewController {
         mainView.snp.makeConstraints{ make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func didForgotPassword(user: ForgotPassword) {
+        print("Succesfully sent mail")
+    }
+    
+    func didFail(with error: Error) {
+        print("Failed to send mail")
     }
 }

@@ -49,7 +49,8 @@ class LoginViewController : UIViewController, LoginViewModelDelegate {
     }
     
     @objc func resetPasswordPressed() {
-        let vc = EmailViewController()
+        let userViewModel = UserViewModel()
+        let vc = EmailViewController(userViewModel: userViewModel)
         navigationController?.pushViewController(vc, animated: true)
     }
     
