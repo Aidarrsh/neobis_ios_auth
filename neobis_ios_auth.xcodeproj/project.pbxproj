@@ -34,6 +34,8 @@
 		1CDA8A832A2B34D00046856B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A822A2B34D00046856B /* CustomTextField.swift */; };
 		1CDA8A852A2DCC7A0046856B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A842A2DCC7A0046856B /* UserModel.swift */; };
 		1CDA8A882A2DCCAB0046856B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A872A2DCCAB0046856B /* UserService.swift */; };
+		1CDA8A8B2A2F3DE30046856B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A8A2A2F3DE30046856B /* EmailViewController.swift */; };
+		1CDA8A8D2A2F3DEF0046856B /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A8C2A2F3DEF0046856B /* EmailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		1CDA8A822A2B34D00046856B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1CDA8A842A2DCC7A0046856B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1CDA8A872A2DCCAB0046856B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		1CDA8A8A2A2F3DE30046856B /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		1CDA8A8C2A2F3DEF0046856B /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		1CBFE8842A1F8754003A65ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1CDA8A892A2F3DC90046856B /* EmailConfirmScreen */,
 				1CDA8A812A2B34AE0046856B /* TextField */,
 				1CDA8A7C2A2775790046856B /* ResetPasswordScreen */,
 				1CDA8A772A24BB5A0046856B /* RegistrationScreen */,
@@ -209,6 +214,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		1CDA8A892A2F3DC90046856B /* EmailConfirmScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A8A2A2F3DE30046856B /* EmailViewController.swift */,
+				1CDA8A8C2A2F3DEF0046856B /* EmailView.swift */,
+			);
+			path = EmailConfirmScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +313,7 @@
 				1CD97DDF2A1F82D90004518D /* SplashViewController.swift in Sources */,
 				1CBFE8862A1F87FF003A65ED /* SplashScreenView.swift in Sources */,
 				1CDA8A7B2A24BB7A0046856B /* RegistrationScreenView.swift in Sources */,
+				1CDA8A8B2A2F3DE30046856B /* EmailViewController.swift in Sources */,
 				1CDA8A792A24BB6C0046856B /* RegistrationViewController.swift in Sources */,
 				1CDA8A7E2A2775930046856B /* ResetViewController.swift in Sources */,
 				1CDA8A852A2DCC7A0046856B /* UserModel.swift in Sources */,
@@ -307,6 +322,7 @@
 				1CDA8A6E2A20C9A40046856B /* LoginViewController.swift in Sources */,
 				1CDA8A832A2B34D00046856B /* CustomTextField.swift in Sources */,
 				1CDA8A712A20CC4B0046856B /* LoginScreenView.swift in Sources */,
+				1CDA8A8D2A2F3DEF0046856B /* EmailView.swift in Sources */,
 				1CD97DDD2A1F82D90004518D /* SceneDelegate.swift in Sources */,
 				1CDA8A732A2375810046856B /* UserViewModel.swift in Sources */,
 			);

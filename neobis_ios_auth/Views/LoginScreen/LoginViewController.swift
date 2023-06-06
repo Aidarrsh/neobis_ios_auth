@@ -11,12 +11,21 @@ import SnapKit
 
 class LoginViewController : UIViewController, LoginViewModelDelegate {
     let mainView = LoginScreenView()
-    var userViewModel: UserViewModel!
+    var userViewModel: UserViewModelProtocol!
+    
+    init(userViewModel: UserViewModelProtocol) {
+        super.init(nibName: nil, bundle: nil)
+        self.userViewModel = userViewModel
+        self.userViewModel.loginDelegate = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        userViewModel = UserViewModel(loginDelegate: self)
         
         let backButton = UIBarButtonItem(image: UIImage(named: "backButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backPressed))
         self.navigationItem.leftBarButtonItem = backButton
@@ -40,7 +49,7 @@ class LoginViewController : UIViewController, LoginViewModelDelegate {
     }
     
     @objc func resetPasswordPressed() {
-        let vc = ResetViewController()
+        let vc = EmailViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -25,7 +25,18 @@ protocol PasswordResetViewModelDelegate: AnyObject {
     func didFail(with error: Error)
 }
 
-class UserViewModel {
+protocol UserViewModelProtocol: AnyObject {
+    var registrationDelegate: RegistrationViewModelDelegate? { get set }
+    var loginDelegate: LoginViewModelDelegate? { get set }
+    var passwordResetDelegate: PasswordResetViewModelDelegate? { get set }
+
+    func registerUser(email: String, password: String, password2: String)
+    func loginUser(email: String, password: String)
+    func forgotPassword(email: String)
+    func confirmForgotPassword(email: String, newPassword: String, activationCode: String)
+}
+
+class UserViewModel: UserViewModelProtocol {
     weak var registrationDelegate: RegistrationViewModelDelegate?
     weak var loginDelegate: LoginViewModelDelegate?
     weak var passwordResetDelegate: PasswordResetViewModelDelegate?
@@ -43,7 +54,7 @@ class UserViewModel {
     func registerUser(email: String, password: String, password2: String) {
         let parameters: [String: Any] = ["email": email, "password": password, "password2": password2]
         
-        apiService.post(endpoint: "/register", parameters: parameters) { [weak self] (result) in
+        apiService.post(endpoint: "register/", parameters: parameters) { [weak self] (result) in
             switch result {
             case .success(let data):
                 let decoder = JSONDecoder()
@@ -67,7 +78,7 @@ class UserViewModel {
 
     func loginUser(email: String, password: String) {
         let parameters: [String: Any] = ["email": email, "password": password]
-
+        print(email + "\n" + password)
         apiService.post(endpoint: "login/", parameters: parameters) { [weak self] (result) in
             switch result {
             case .success(let data):
@@ -91,4 +102,55 @@ class UserViewModel {
             }
         }
     }
+    
+    func forgotPassword(email: String) {
+        let parameters: [String: Any] = ["email": email]
+
+        apiService.post(endpoint: "forgot_password/", parameters: parameters) { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                let decoder = JSONDecoder()
+                do {
+                    let response = try decoder.decode(ForgotPassword.self, from: data)
+                    DispatchQueue.main.async {
+                        self?.passwordResetDelegate?.didForgotPassword(user: response)
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self?.passwordResetDelegate?.didFail(with: error)
+                    }
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.passwordResetDelegate?.didFail(with: error)
+                }
+            }
+        }
+    }
+
+    func confirmForgotPassword(email: String, newPassword: String, activationCode: String) {
+        let parameters: [String: Any] = ["email": email, "new_password": newPassword, "activation_code": activationCode]
+
+        apiService.post(endpoint: "forgot_password_confirm/", parameters: parameters) { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                let decoder = JSONDecoder()
+                do {
+                    let response = try decoder.decode(ForgotPasswordConfirm.self, from: data)
+                    DispatchQueue.main.async {
+                        self?.passwordResetDelegate?.didConfirmForgotPassword(user: response)
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self?.passwordResetDelegate?.didFail(with: error)
+                    }
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.passwordResetDelegate?.didFail(with: error)
+                }
+            }
+        }
+    }
+
 }

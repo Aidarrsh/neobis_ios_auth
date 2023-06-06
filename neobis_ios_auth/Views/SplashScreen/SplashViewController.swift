@@ -34,8 +34,10 @@ class SplashViewController : UIViewController {
     }
     
     @objc func authorizeButtonPressed() {
-        let vc = LoginViewController()
-        
+        let userViewModel = UserViewModel()
+        let vc = LoginViewController(userViewModel: userViewModel)
+            
         navigationController?.pushViewController(vc, animated: true)
     }
+
 }
