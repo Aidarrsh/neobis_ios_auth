@@ -8,7 +8,7 @@
 import Foundation
 
 class APIService {
-    let baseURL = "http://16.171.11.58/swagger/"
+    let baseURL = "http://16.171.11.58/api/v1/account/"
 
     func post(endpoint: String, parameters: [String: Any], completion: @escaping (Result<Data, Error>) -> Void) {
         guard let url = URL(string: baseURL + endpoint) else { return }

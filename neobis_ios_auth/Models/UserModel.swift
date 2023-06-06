@@ -26,8 +26,8 @@ struct ForgotPasswordConfirm: Codable {
 }
 
 struct TokenObtainPair: Codable {
-    let email: String
-    let password: String
+    let refresh: String
+    let access: String
 }
 
 struct TokenRefresh: Codable {

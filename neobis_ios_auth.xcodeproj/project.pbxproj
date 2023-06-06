@@ -26,7 +26,7 @@
 		1CD97DE72A1F82DA0004518D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD97DE52A1F82DA0004518D /* LaunchScreen.storyboard */; };
 		1CDA8A6E2A20C9A40046856B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A6D2A20C9A40046856B /* LoginViewController.swift */; };
 		1CDA8A712A20CC4B0046856B /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A702A20CC4B0046856B /* LoginScreenView.swift */; };
-		1CDA8A732A2375810046856B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A722A2375810046856B /* LoginViewModel.swift */; };
+		1CDA8A732A2375810046856B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A722A2375810046856B /* UserViewModel.swift */; };
 		1CDA8A792A24BB6C0046856B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A782A24BB6C0046856B /* RegistrationViewController.swift */; };
 		1CDA8A7B2A24BB7A0046856B /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7A2A24BB7A0046856B /* RegistrationScreenView.swift */; };
 		1CDA8A7E2A2775930046856B /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A7D2A2775930046856B /* ResetViewController.swift */; };
@@ -57,7 +57,7 @@
 		1CD97DE82A1F82DA0004518D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CDA8A6D2A20C9A40046856B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1CDA8A702A20CC4B0046856B /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
-		1CDA8A722A2375810046856B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1CDA8A722A2375810046856B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		1CDA8A782A24BB6C0046856B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1CDA8A7A2A24BB7A0046856B /* RegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
 		1CDA8A7D2A2775930046856B /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		1CBFE8832A1F874C003A65ED /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1CDA8A722A2375810046856B /* LoginViewModel.swift */,
+				1CDA8A722A2375810046856B /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				1CDA8A832A2B34D00046856B /* CustomTextField.swift in Sources */,
 				1CDA8A712A20CC4B0046856B /* LoginScreenView.swift in Sources */,
 				1CD97DDD2A1F82D90004518D /* SceneDelegate.swift in Sources */,
-				1CDA8A732A2375810046856B /* LoginViewModel.swift in Sources */,
+				1CDA8A732A2375810046856B /* UserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
