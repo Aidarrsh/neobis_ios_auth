@@ -1,23 +1,36 @@
 //
-//  ResetViewController.swift
+//  CreatePasswordViewController.swift
 //  neobis_ios_auth
 //
-//  Created by Айдар Шарипов on 31/5/23.
+//  Created by Айдар Шарипов on 7/6/23.
 //
 
 import Foundation
 import UIKit
 import SnapKit
 
-class ResetViewController : UIViewController, ConfirmPasswordViewModelDelegate {
+class CreatePasswordViewController : UIViewController, RegisterConfirmViewModelDelegate {
+    func didConfirmRegistration(user: Register) {
+        print()
+    }
     
-    let mainView = ResetView()
+    var name: String
+    var last_name: String
+    var birthday: String
+    var email: String
+    
+    let mainView = CreatePasswordView()
+    let infoView = InfoView()
     var userViewModel : UserViewModelProtocol!
     
-    init(userViewModel: UserViewModelProtocol) {
+    init(userViewModel: UserViewModelProtocol, name: String = "", last_name: String = "", birthday: String = "",  email: String = "") {
+        self.name = name
+        self.last_name = last_name
+        self.birthday = birthday
+        self.email = email
         super.init(nibName: nil, bundle: nil)
         self.userViewModel = userViewModel
-        self.userViewModel.confirmPasswordDelegate = self
+        self.userViewModel.registerConfirmDelegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -28,7 +41,7 @@ class ResetViewController : UIViewController, ConfirmPasswordViewModelDelegate {
         super.viewDidLoad()
         setupView()
         
-        title = "Сброс пароля"
+        title = "Создать пароль"
         
         
         let backButton = UIBarButtonItem(image: UIImage(named: "backButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backPressed))
@@ -38,14 +51,13 @@ class ResetViewController : UIViewController, ConfirmPasswordViewModelDelegate {
     
     @objc func enterPressed() {
         if mainView.enterButton.currentTitleColor == .white{
-            guard let passwordNew = mainView.newPassword.text, let password2 = mainView.repeatPassword.text, let actCode = mainView.authCode.text else {
+            guard let password = mainView.newPassword.text, let password2 = mainView.repeatPassword.text else {
                 // Show error message to user
-                print("Wrong auth code")
+                print("Error")
                 return
             }
-            userViewModel.confirmForgotPassword(newPassword: passwordNew, password2: password2 ,activationCode: actCode)
+            userViewModel.registerConfirmUser(email: email, name: name, last_name: last_name, birthday: birthday, password: password, password2: password2)
         }
-        
     }
     
     @objc func backPressed() {
@@ -68,4 +80,6 @@ class ResetViewController : UIViewController, ConfirmPasswordViewModelDelegate {
         print("Error in changing password")
     }
 }
+
+//let name = infoView.nameField.text, let last_name = infoView.secondNameField.text, let birthday = infoView.dateField.text,
 

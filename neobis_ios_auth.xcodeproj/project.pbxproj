@@ -39,6 +39,8 @@
 		1CDA8A902A2F504E0046856B /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A8F2A2F504E0046856B /* PopUp.swift */; };
 		1CDA8A952A2F56AE0046856B /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A942A2F56AE0046856B /* InfoView.swift */; };
 		1CDA8A972A2F56B80046856B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A962A2F56B80046856B /* InfoViewController.swift */; };
+		1CDA8A9A2A3077DB0046856B /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A992A3077DB0046856B /* CreatePasswordView.swift */; };
+		1CDA8A9C2A3077E60046856B /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA8A9B2A3077E60046856B /* CreatePasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		1CDA8A8F2A2F504E0046856B /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		1CDA8A942A2F56AE0046856B /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1CDA8A962A2F56B80046856B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		1CDA8A992A3077DB0046856B /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		1CDA8A9B2A3077E60046856B /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +112,8 @@
 		1CBFE8842A1F8754003A65ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1CDA8A932A2F569F0046856B /* InfoScren */,
+				1CDA8A982A3077C80046856B /* CreatePassword */,
+				1CDA8A932A2F569F0046856B /* InfoScreen */,
 				1CDA8A8E2A2F50370046856B /* PopUp */,
 				1CDA8A892A2F3DC90046856B /* EmailConfirmScreen */,
 				1CDA8A812A2B34AE0046856B /* TextField */,
@@ -239,13 +244,22 @@
 			path = PopUp;
 			sourceTree = "<group>";
 		};
-		1CDA8A932A2F569F0046856B /* InfoScren */ = {
+		1CDA8A932A2F569F0046856B /* InfoScreen */ = {
 			isa = PBXGroup;
 			children = (
 				1CDA8A942A2F56AE0046856B /* InfoView.swift */,
 				1CDA8A962A2F56B80046856B /* InfoViewController.swift */,
 			);
-			path = InfoScren;
+			path = InfoScreen;
+			sourceTree = "<group>";
+		};
+		1CDA8A982A3077C80046856B /* CreatePassword */ = {
+			isa = PBXGroup;
+			children = (
+				1CDA8A992A3077DB0046856B /* CreatePasswordView.swift */,
+				1CDA8A9B2A3077E60046856B /* CreatePasswordViewController.swift */,
+			);
+			path = CreatePassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,7 +365,9 @@
 				1CDA8A8D2A2F3DEF0046856B /* EmailView.swift in Sources */,
 				1CD97DDD2A1F82D90004518D /* SceneDelegate.swift in Sources */,
 				1CDA8A952A2F56AE0046856B /* InfoView.swift in Sources */,
+				1CDA8A9A2A3077DB0046856B /* CreatePasswordView.swift in Sources */,
 				1CDA8A732A2375810046856B /* UserViewModel.swift in Sources */,
+				1CDA8A9C2A3077E60046856B /* CreatePasswordViewController.swift in Sources */,
 				1CDA8A972A2F56B80046856B /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

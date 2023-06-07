@@ -95,6 +95,8 @@ class InfoView : UIView, UITextFieldDelegate {
         return button
     }()
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -128,35 +130,35 @@ class InfoView : UIView, UITextFieldDelegate {
     func setupConstraints() {
         
         mailField.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 336 / 812)
+            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 346 / 812)
             make.centerX.equalToSuperview()
             make.height.equalTo(UIScreen.main.bounds.height * 60 / 812)
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
         }
         
         nameField.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 84 / 812)
+            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 94 / 812)
             make.centerX.equalToSuperview()
             make.height.equalTo(UIScreen.main.bounds.height * 60 / 812)
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
         }
         
         secondNameField.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 168 / 812)
+            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 178 / 812)
             make.centerX.equalToSuperview()
             make.height.equalTo(UIScreen.main.bounds.height * 60 / 812)
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
         }
         
         dateField.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 252 / 812)
+            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 262 / 812)
             make.centerX.equalToSuperview()
             make.height.equalTo(UIScreen.main.bounds.height * 60 / 812)
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
         }
         
         enterButton.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 440 / 812)
+            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 450 / 812)
             make.centerX.equalToSuperview()
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
             make.height.equalTo(UIScreen.main.bounds.height * 65 / 812)
@@ -170,7 +172,7 @@ class InfoView : UIView, UITextFieldDelegate {
         
         if textField == mailField {
    
-            if updatedText.contains("@") && nameField.text!.count >= 8 {
+            if updatedText.contains("@") && nameField.text!.count >= 1 {
                 enterButton.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
                 enterButton.setTitleColor(UIColor.white, for: .normal)
             } else {

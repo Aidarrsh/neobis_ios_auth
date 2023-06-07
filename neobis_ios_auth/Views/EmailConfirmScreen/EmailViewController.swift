@@ -36,13 +36,19 @@ class EmailViewController : UIViewController, ForgotPasswordViewModelDelegate {
     }
     
     @objc func enterPressed() {
-        guard let email = mainView.loginField.text else {
-            // Show error message to user
-            print("Email or password is empty.")
-            return
+        if mainView.enterButton.currentTitleColor == .white{
+            guard let email = mainView.loginField.text else {
+                // Show error message to user
+                print("Email or password is empty.")
+                return
+            }
+            
+            userViewModel.forgotPassword(email: email)
+            let userViewModel = UserViewModel()
+            let vc = ResetViewController(userViewModel: userViewModel)
+            navigationController?.pushViewController(vc, animated: true)
         }
         
-        userViewModel.forgotPassword(email: email)
     }
 
 
@@ -62,6 +68,6 @@ class EmailViewController : UIViewController, ForgotPasswordViewModelDelegate {
     }
     
     func didFail(with error: Error) {
-        print("Failed to send mail")
+//        print("Failed to send mail")
     }
 }

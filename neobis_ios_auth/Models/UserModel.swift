@@ -12,17 +12,19 @@ struct ForgotPassword: Codable {
 }
 
 struct ForgotPasswordConfirm: Codable {
-    let email: String
-    let newPassword: String
-    let newPasswordConfirm: String
-    let activationCode: String
+    let new_password: String
+    let new_password_confirm: String
+    let activation_code: String
 
     enum CodingKeys: String, CodingKey {
-        case email
-        case newPassword = "new_password"
-        case newPasswordConfirm = "new_password_confirm"
-        case activationCode = "activation_code"
+        case new_password = "new_password"
+        case new_password_confirm = "new_password_confirm"
+        case activation_code = "activation_code"
     }
+}
+
+struct PasswordChangeResponse: Decodable {
+    let msg: String
 }
 
 struct TokenObtainPair: Codable {
@@ -35,8 +37,15 @@ struct TokenRefresh: Codable {
     let access: String
 }
 
+struct RegisterBegin: Codable {
+    let email: String
+}
+
 struct Register: Codable {
     let email: String
+    let name: String
+    let last_name: String
+    let birthday: String
     let password: String
     let password2: String
 }
